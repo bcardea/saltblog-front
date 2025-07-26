@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+.App {
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.background-video {
+  position: fixed;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: 480px;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #345A7C;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.header-logo img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+  color: #345A7C;
+  font-family: 'Inter', sans-serif;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #7F8C8D;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.form-section,
+.status-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(52, 90, 124, 0.08);
+  border: 1px solid rgba(161, 193, 215, 0.2);
+}
+
+@media (max-width: 768px) {
+  .background-video {
+    display: none;
+  }
+  
+  .main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  .form-section,
+  .status-section {
+    padding: 24px;
+  }
+}
+
+/* Salt Brand Colors CSS Variables */
+:root {
+  --salt-primary-dark: #345A7C;
+  --salt-accent-light: #A1C1D7;
+  --salt-neutral-beige: #F5F5DC;
+  --salt-accent-gold: #EFD9A0;
+  --salt-neutral-gray: #7F8C8D;
+}
