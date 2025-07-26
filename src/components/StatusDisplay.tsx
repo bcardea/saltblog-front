@@ -43,17 +43,6 @@ const StatusDisplay: React.FC<StatusDisplayProps> = ({
   const currentStep = getCurrentStep();
   const latestUpdate = statusUpdates[statusUpdates.length - 1];
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed':
-        return '✅';
-      case 'error':
-        return '❌';
-      default:
-        return '⏳';
-    }
-  };
-
   return (
     <div className="status-display">
       <h3>Generation Progress</h3>
